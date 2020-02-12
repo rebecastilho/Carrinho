@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+@import "https://fonts.google.com/specimen/Poppins?selection.family=Poppins";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root{
+  background-color: #d1d8e5;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+html, body, #root {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lista-produtos {
+  overflow:auto; 
+  height: 50vh;
+}
+
+.card {
+  background-color: #FFF;
+  width: 25vw;
+  -webkit-box-shadow: 4px 4px 7px 0px rgba(53, 50, 50, 0.31);
+  -moz-box-shadow:    4px 4px 7px 0px rgba(53, 50, 50, 0.31);
+  box-shadow:         4px 4px 7px 0px rgba(53, 50, 50, 0.31);
+  border-radius: 4px;
+}
+
+.card-titulo{
+  text-align: center;
+  border-bottom: 1px solid #cdcdcd;
+  padding: 1em;
+  font-weight: bolder;
+}
+.produto {
+  display: flex;
+  margin: 1em;
+}
+
+.produto img {
+  height: 80px;
+  width: 80px;
+  border: 1px solid #cdcdcd;
+}
+
+.produto p:first-letter {
+  text-transform:capitalize;
+}
+
+.info {
+  margin:1em;
+  font-size: 13px;
+}
+
+.info p:first-of-type {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.info p:nth-of-type(2n)  {
+  color: #a39c9c;
+  font-size: 12px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  border:1px solid #cdcdcd;
+  padding: 1em;
+  font-weight: bolder;
+  flex-wrap: wrap;
+}
+
+.card-footer{
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+.card button {
+  background-color: #3b74f2;
+  font-weight: bold;
+  font-size: 15px;
+  color: #FFF;
+  padding: 3%;
+  border-radius: 4px;
+  width: 30vw;
+}
+
+.aviso-frete {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.aviso-frete p {
+  background-color: rgb(199, 255, 166);
+  color: rgb(10, 168, 18);
+  font-size: small;
+  padding: 0.5em;
+  border-radius: 10px;
+  margin-top: 1%;
+}
+
+li {
+  display: inline;
+}
+
+button {
+  width: 12.5vw;
+  border: 1px solid #cdcdcd;
+  padding: 1em;
+  border-radius: 4px;
 }
